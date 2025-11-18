@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .block {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .block-image {
+            width: 100%;
+            height: 500px; /* Altura fija para las imágenes*/
+            object-fit: cover;
+        }
+
+        .block-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .block-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .block-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Estilos de botones de navegación */
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .nav-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #333;
+            background: white;
+            color: #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background: #333;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .block-content {
+                padding: 20px;
+            }
+
+            .block-title {
+                font-size: 20px;
+            }
+
+            .block-description {
+                font-size: 14px;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-button {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Botones de navegación -->
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-button">← Volver al Inicio</a>
+            <a href="combos.html" class="nav-button">Ver Combos →</a>
+        </div>
+
+        <div class="grid">
+            <!-- IMPERIAL AGARROBO -->
+            <div class="block">
+                <img src="imagenes/imperialagarrobo.jpeg" alt="Producto 1" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Mate imperial de algarrobo</h1>
+                    <h2 class="block-title">$13500</h2>
+                    <p class="block-description">Mate con virola de acero.
+                        Incluye bombilla de acero.</p>
+                </div>
+            </div>
+
+            <!-- CAMIONERO ALGARROBO -->
+            <div class="block">
+                <img src="imagenes/matealgarrobocam.jpeg" alt="Producto 2" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Mate camionero de algarrobo</h1>
+                    <h2 class="block-title">$11500</h2>
+                    <p class="block-description">Mate con virola de acero.
+                        Incluye bombilla de acero</p>
+                </div>
+            </div>
+
+            <!-- IMPERIAL -->
+            <div class="block">
+                <img src="imagenes/mateimperia.jpeg" alt="Producto 3" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Mate imperial</h1>
+                    <h2 class="block-title">$22000</h2>
+                    <p class="block-description">Mate con virola de acero.
+                        No incluye bombilla.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CAMIONERO -->
+            <div class="block">
+                <img src="imagenes/CAMIONERO.jpg" alt="Producto 4" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Mate camionero</h1>
+                    <h2 class="block-title">$15000</h2>
+                    <p class="block-description">Mate con virola de acero.
+                        No incluye bombilla.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CANASTA CUERO -->
+            <div class="block">
+                <img src="imagenes/CANASTACUERO.jpg" alt="Producto 5" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Canasta de cuero</h1>
+                    <h2 class="block-title">$24000</h2>
+                    <p class="block-description">Producto 100% artesanas. 
+                        Base de madera reforzada.
+                        Colores a elegir: Crudo, Negro y Rojo. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bloque 6 -->
+            <div class="block">
+                <img src="imagenes/portamatecuero.jpg" alt="Producto 6" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Porta mate de cuero</h1> 
+                    <h2 class="block-title">$14000</h2>
+                    <p class="block-description">Producto 100% artesanas. 
+                        Colores a elegir: Crudo, Negro y Rojo.
+                    </p>
+                </div>
+            </div>
+            <!--PORTA MATE SINTETICO-->
+            <div class="block">
+                <img src="imagenes/portamatesintetico.jpeg" alt="Producto 7" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Porta mate sintético</h1> 
+                    <h2 class="block-title">$5000</h2>
+                    <p class="block-description">Unico color: Negro.
+                    </p>
+                </div>
+            </div>
+            <!--BOMBILLA PICO DE LORO ACERO-->
+            <div class="block">
+                <img src="imagenes/bombillaaaaaa.jpg" alt="Producto 7" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Bombilla pico de loro</h1> 
+                    <h2 class="block-title">$4000</h2>
+                    <p class="block-description">Material: Acero.
+                    </p>
+                </div>
+            </div>
+            <!--BOMBILLA ACERO-->
+            <div class="block">
+                <img src="imagenes/bombillaplana.jpg" alt="Producto 7" class="block-image">
+                <div class="block-content">
+                    <h1 class="block-title">Bombilla Plana.</h1> 
+                    <h2 class="block-title">$3000</h2>
+                    <p class="block-description">Material: Acero
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
